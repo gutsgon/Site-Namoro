@@ -4,6 +4,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
+    margin: 0;
+    overflow-y: auto;
+    padding-bottom: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .logo {
@@ -25,13 +32,15 @@ body {
     } to {
         transform: scale(1.1);
     }
-  }
+}
 
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    z-index: 2;
+    position: relative;
 }
 
 .question {
@@ -63,4 +72,25 @@ body {
     width: 100%;
     position: absolute;
     z-index: -1;
+}
+
+.textbox {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:#965b74; /* Cor do fundo com transparência */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    z-index: 3;
+    max-width: 90%;
+    margin: 20px auto
+}
+
+.textbox p {
+    margin: 0; /* Remover margem padrão do parágrafo */
+    color: #000000; /* Cor do texto */
+    white-space: pre-line; /* Preserva espaços e quebras de linha */
+    line-height: 1.5; /* Ajusta o espaçamento entre linhas */
 }
