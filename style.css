@@ -76,7 +76,7 @@ body {
 
 .textbox {
     position: absolute;
-    top: 100%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color:#965b74; /* Cor do fundo com transparência */
