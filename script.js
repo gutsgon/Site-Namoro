@@ -33,9 +33,14 @@ buttonYes.addEventListener("click", async () => {
     tempNot.textContent = "Não";
     buttonsBox.appendChild(tempYes);
     buttonsBox.appendChild(tempNot);
+    let sourceVideo = document.createElement("source")
     
     tempYes.addEventListener("click", () => {
         logoImage.src = "imgs/Sanrio.gif";
+        sourceVideo.src = "imgs/Goo Goo Dolls - Iris.mp3"
+        sourceVideo.type = "audio/mp3"
+        sourceVideo.id = "source"
+        videoElement.appendChild(sourceVideo)
         showSecondGifAndText();
     });
 
