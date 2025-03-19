@@ -90,26 +90,41 @@ body {
     z-index: -1;
 }
 
-/* Caixa de texto */
-.textbox {
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #965b74;
-    padding: 5vh 5vw; /* Ajuste usando unidades relativas */
-    border-radius: 10px;
-    text-align: left;
-    z-index: 3;
-    max-width: 90%;
-}
-
 .textbox p {
     margin: 0;
     color: #000000;
     white-space: pre-line;
     line-height: 1.5;
 }
+
+/* GIF de fundo */
+#secondGif {
+    background-image: url('imgs/heart falling down.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Manter o gif como fundo */
+}
+
+/* Caixa de texto */
+.textbox {
+    position: absolute;
+    top: 20%; /* Ajuste a posição vertical para a caixa de texto */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #965b74;
+    padding: 5vh 5vw;
+    border-radius: 10px;
+    text-align: left;
+    z-index: 2; /* Certifique-se de que a caixa de texto esteja acima do gif */
+    max-width: 90%;
+}
+
 
 /* Media Query para telas pequenas (celulares) */
 @media (max-width: 768px) {
