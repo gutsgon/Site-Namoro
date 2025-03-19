@@ -108,22 +108,23 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Manter o gif como fundo */
+    z-index: -1; /* Colocando o gif atrás */
 }
 
 /* Caixa de texto */
 .textbox {
     position: absolute;
-    top: 20%; /* Ajuste a posição vertical para a caixa de texto */
+    top: 20%; /* A caixa de texto começa a 20% do topo da tela */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%); /* Centraliza a caixa de texto horizontalmente */
     background-color: #965b74;
     padding: 5vh 5vw;
     border-radius: 10px;
     text-align: left;
-    z-index: 2; /* Certifique-se de que a caixa de texto esteja acima do gif */
+    z-index: 1; /* Certificando que a caixa de texto está acima do GIF, mas não sobrepondo tudo */
     max-width: 90%;
 }
+
 
 
 /* Media Query para telas pequenas (celulares) */
