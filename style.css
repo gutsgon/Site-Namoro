@@ -98,6 +98,7 @@ body {
 }
 
 /* GIF de fundo */
+/* GIF de fundo permanece inalterado */
 #secondGif {
     background-image: url('imgs/heart falling down.gif');
     background-size: cover;
@@ -108,22 +109,25 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Colocando o gif atrás */
+    z-index: -1;
 }
 
-/* Caixa de texto */
+/* Caixa de texto reposicionada e reduzida */
 .textbox {
     position: absolute;
-    top: 20%; /* A caixa de texto começa a 20% do topo da tela */
-    left: 50%;
-    transform: translateX(-50%); /* Centraliza a caixa de texto horizontalmente */
-    background-color: #965b74;
-    padding: 5vh 5vw;
+    bottom: 10%;       /* posiciona a caixa 10% acima do fundo */
+    left: 5%;          /* posiciona a caixa no canto esquerdo */
+    transform: none;   /* remove o translate para usar posicionamento fixo */
+    background-color: rgba(150, 91, 116, 0.85); /* fundo semitransparente */
+    padding: 20px;
     border-radius: 10px;
     text-align: left;
-    z-index: 1; /* Certificando que a caixa de texto está acima do GIF, mas não sobrepondo tudo */
-    max-width: 90%;
+    z-index: 3;        /* garante que fique acima do GIF */
+    max-width: 40%;    /* reduz a largura para não ocupar todo o espaço */
+    max-height: 30%;   /* define altura máxima para que o GIF fique visível */
+    overflow-y: auto;  /* se o texto for longo, permite rolagem */
 }
+
 
 
 
