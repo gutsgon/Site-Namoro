@@ -111,20 +111,19 @@ body {
     z-index: -1;
 }
 
-/* Caixa de texto reposicionada e reduzida */
 .textbox {
     position: absolute;
-    bottom: 10%;       /* posiciona a caixa 10% acima do fundo */
-    left: 5%;          /* posiciona a caixa no canto esquerdo */
-    transform: none;   /* remove o translate para usar posicionamento fixo */
-    background-color: transparent /* fundo semitransparente */
+    top: 50%; /* Posiciona a caixa de texto no meio da tela */
+    left: 50%; /* Posiciona a caixa de texto no meio da tela */
+    transform: translate(-50%, -50%); /* Ajusta a posição para o centro exato */
+    background-color: transparent; /* Mantém o fundo transparente */
     padding: 20px;
     border-radius: 10px;
     text-align: left;
-    z-index: 3;        /* garante que fique acima do GIF */
-    max-width: 40%;    /* reduz a largura para não ocupar todo o espaço */
-    max-height: 30%;   /* define altura máxima para que o GIF fique visível */
-    overflow-y: auto;  /* se o texto for longo, permite rolagem */
+    z-index: 3;
+    max-width: 80%; /* Ajuste de largura, dependendo do seu design */
+    max-height: 80%; /* Ajuste de altura, dependendo do seu design */
+    overflow-y: auto;
 }
 
 
