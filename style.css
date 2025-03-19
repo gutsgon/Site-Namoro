@@ -97,7 +97,6 @@ body {
     line-height: 1.5;
 }
 
-/* GIF de fundo */
 /* GIF de fundo permanece inalterado */
 #secondGif {
     background-image: url('imgs/heart falling down.gif');
@@ -118,7 +117,7 @@ body {
     bottom: 10%;       /* posiciona a caixa 10% acima do fundo */
     left: 5%;          /* posiciona a caixa no canto esquerdo */
     transform: none;   /* remove o translate para usar posicionamento fixo */
-    background-color: rgba(150, 91, 116, 0.85); /* fundo semitransparente */
+    background-color: transparent /* fundo semitransparente */
     padding: 20px;
     border-radius: 10px;
     text-align: left;
