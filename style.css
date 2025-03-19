@@ -1,3 +1,11 @@
+/* Resetando margens e padding para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo do site */
 body {
     background-color: #965b74;
     display: flex;
@@ -7,90 +15,125 @@ body {
     position: relative;
     margin: 0;
     overflow-y: auto;
-    padding-bottom: 200px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding-bottom: 5vh; /* Usando unidade relativa */
 }
 
-.logo {
-    width: 128px;
-    border: 2px white solid;
+/* Logo */
+.logo, .logo_animated {
+    width: 20vw;  /* Usando vw para que a largura seja relativa à largura da tela */
+    max-width: 128px; /* Limita o tamanho máximo */
+    border: 2px solid white;
     border-radius: 25px;
-} 
+}
 
 .logo_animated {
-    width: 128px;
-    border: 2px white solid;
-    border-radius: 25px;
     animation: logo 1s infinite alternate;
-} 
+}
 
+/* Animação */
 @keyframes logo {
     from {
         transform: scale(1);
-    } to {
+    } 
+    to {
         transform: scale(1.1);
     }
 }
 
+/* Main container */
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 5vh; /* Usando vh para garantir que o espaçamento seja proporcional */
     z-index: 2;
     position: relative;
 }
 
+/* Estilo da pergunta */
 .question {
     text-align: center;
     color: white;
+    font-size: 4vw; /* Tamanho de fonte relativo */
 }
 
+/* Botões */
 .buttons {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     width: 100%;
+    flex-wrap: wrap;  /* Garante que os botões se ajustem se não couberem */
 }
 
 .button {
     background-color: transparent;
     border: 2px solid white;
-    padding: 5px;
-    width: 100%;
+    padding: 2vh 4vw; /* Usando unidades relativas para padding */
+    width: 45%;  /* Limita a largura dos botões */
     color: white;
     cursor: pointer;
     transition: transform .5s;
+    text-align: center;
 }
 
 .button:hover {
     transform: scale(1.1);
 }
 
+/* Vídeo */
 .video {
     width: 100%;
     position: absolute;
     z-index: -1;
 }
 
+/* Caixa de texto */
 .textbox {
     position: absolute;
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color:#965b74; /* Cor do fundo com transparência */
-    padding: 20px;
+    background-color: #965b74;
+    padding: 5vh 5vw; /* Ajuste usando unidades relativas */
     border-radius: 10px;
     text-align: left;
     z-index: 3;
     max-width: 90%;
-    margin: 20px auto
 }
 
 .textbox p {
-    margin: 0; /* Remover margem padrão do parágrafo */
-    color: #000000; /* Cor do texto */
-    white-space: pre-line; /* Preserva espaços e quebras de linha */
-    line-height: 1.5; /* Ajusta o espaçamento entre linhas */
+    margin: 0;
+    color: #000000;
+    white-space: pre-line;
+    line-height: 1.5;
+}
+
+/* Media Query para telas pequenas (celulares) */
+@media (max-width: 768px) {
+    .question {
+        font-size: 5vw;  /* Tamanho de fonte menor para telas pequenas */
+    }
+    .buttons {
+        flex-direction: column;  /* Alinha os botões na vertical */
+        gap: 5px;
+    }
+    .button {
+        width: 100%;  /* Botões ocupando a largura total */
+    }
+    .textbox {
+        top: 70%; /* Ajusta a posição da caixa de texto */
+    }
+}
+
+/* Media Query para telas muito pequenas (como celulares em modo retrato) */
+@media (max-width: 480px) {
+    .question {
+        font-size: 6vw;  /* Tamanho de fonte ainda menor */
+    }
+    .textbox {
+        padding: 4vh 4vw;  /* Reduz o padding para caber em telas menores */
+    }
 }
